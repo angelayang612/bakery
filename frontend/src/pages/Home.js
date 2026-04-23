@@ -15,7 +15,7 @@ const Home = () => {
         const fetchProducts = async () => {
             // this sends a get request to the backend to retrive the list of products
             // fetch always defaults to GET
-            const response = await fetch('/products');
+            const response = await fetch('/api/products');
             // an array of objects where each object represents a product
             const json = await response.json();
 

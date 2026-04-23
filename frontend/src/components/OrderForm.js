@@ -13,7 +13,7 @@ const OrderForm = () => {
 
         // since fetch always defaults to GET 
         // we have to specify that the method is POST
-        const response = await fetch('/order', {
+        const response = await fetch('/api/order', {
             method: 'POST',
             body: JSON.stringify(order),
             headers: {

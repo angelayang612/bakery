@@ -31,9 +31,9 @@ app.use((req, res, next) => {
 // and uses them on the app
 // relative to the prefix
 // ohhh okay, so all the routes defined in productRoutes 
-// have to have /products as a url prefix
-app.use('/products', productRoutes);
-app.use('/order', orderRoutes);
+// have to have /api/products as a url prefix
+app.use('/api/products', productRoutes);
+app.use('/api/order', orderRoutes);
 
 // connetct to db
 // asynchronous 

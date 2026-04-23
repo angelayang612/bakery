@@ -50,7 +50,7 @@ const Buy = () => {
         };
 
         try {
-            const response = await fetch('/order', {
+            const response = await fetch('/api/order', {
                 method: 'POST',
                 body: JSON.stringify(orderData),
                 headers: {
