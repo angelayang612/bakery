@@ -1,30 +1,11 @@
 {
-    "version": 2,
-    "builds": [
+    "buildCommand": "npm run vercel-build",
+    "outputDirectory": "frontend/build",
+    "installCommand": "npm install && cd backend && npm install",
+    "rewrites": [
         {
-            "src": "frontend/package.json",
-            "use": "@vercel/static-build",
-            "config": {
-                "distDir": "build"
-            }
-        },
-        {
-            "src": "backend/server.js",
-            "use": "@vercel/node"
+            "source": "/api/:path*",
+            "destination": "/api/server"
         }
-    ],
-    "routes": [
-        {
-            "src": "/api/(.*)",
-            "dest": "backend/server.js"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "frontend/$1"
-        }
-    ],
-    "env": {
-        "MONGO_URI": "@mongo_uri",
-        "PORT": "3000"
-    }
+    ]
 }

@@ -1,0 +1,15 @@
+{
+  "name": "bakery-shop",
+  "version": "1.0.0",
+  "description": "Bakery shop full-stack application",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "vercel-build": "cd frontend && npm install && npm run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "mongoose": "^7.0.0"
+  }
+}
